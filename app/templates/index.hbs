@@ -1,12 +1,24 @@
-<h2>New Message</h2>
-<ul class="post-publish">
-  <li>
-    {{input value=username placeholder="Username"}}
-  </li>
+<!-- <ul class="post-publish">
+  {{input value=username placeholder="Username" type="hidden"}}
   <li>
     {{textarea value=body placeholder="Body"}}
   </li>
   <li>
     <button {{action "sendMessage"}}>Send</button>
   </li>
-</ul>
+</ul> -->
+
+{{input value=username placeholder="Username" type="hidden"}}
+
+<div class="chatbox">
+  <div class="messages">
+    {{#each message in model}}
+      <div><span style="color: {{message.color}}">{{message.username}}:</span> {{message.body}}</div>
+    {{/each}}
+  </div>
+
+  <div class="new-message">
+    {{textarea value=body placeholder="Type your message here..."}}
+    <button {{action "sendMessage"}}>Send</button>
+  </div>
+</div>
