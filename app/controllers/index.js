@@ -6,13 +6,17 @@ export default Ember.ArrayController.extend({
   username: prompt("Please choose a username"),
   actions: {
     sendMessage: function() {
-      var newMessage = this.store.createRecord('message', {
-        username: this.get('username'),
-        body: this.get('body'),
-        timestamp: new Date().getTime()
-      });
+      if (this.get('body')) {
+        var newMessage = this.store.createRecord('message', {
+          username: this.get('username'),
+          body: this.get('body'),
+          color: "#A2D72F",
+          timestamp: new Date().getTime()
+        });
 
-      newMessage.save();
+        newMessage.save();
+        this.set('body', '');
+      }
     }
   }
 });
