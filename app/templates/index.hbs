@@ -1,0 +1,12 @@
+<h2>New Message</h2>
+<ul class="post-publish">
+  <li>
+    {{input value=username placeholder="Username"}}
+  </li>
+  <li>
+    {{textarea value=body placeholder="Body"}}
+  </li>
+  <li>
+    <button {{action "sendMessage"}}>Send</button>
+  </li>
+</ul>
