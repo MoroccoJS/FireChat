@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'firechat',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://firechatdb.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
