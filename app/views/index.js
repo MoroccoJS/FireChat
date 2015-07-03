@@ -8,11 +8,5 @@ export default Ember.View.extend({
       controller.send("sendMessage");
       e.preventDefault();
     }
-  },
-
-  didInsertElement: function() {
-    setTimeout(function () {
-      $(".messages").scrollTop($(".messages")[0].scrollHeight);
-    }, 10);
   }
 });

@@ -19,10 +19,6 @@ export default Ember.ArrayController.extend({
 
         newMessage.save();
         this.set('body', '');
-
-        setTimeout(function () {
-          $(".messages").scrollTop($(".messages")[0].scrollHeight);
-        }, 10);
       }
     }
   }
