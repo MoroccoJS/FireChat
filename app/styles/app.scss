@@ -19,8 +19,17 @@ body {
     padding: 10px;
     overflow-y: auto;
 
-    span {
-      font-weight: bold;
+    .message {
+      margin-bottom: 10px;
+
+      span.username {
+        font-weight: bold;
+      }
+
+      span.date {
+        font-size: 10px;
+        color: #bebebe;
+      }
     }
   }
 

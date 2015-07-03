@@ -1,4 +1,5 @@
 import Ember from 'ember';
+/* global $ */
 
 export default Ember.View.extend({
   keyPress: function(e) {
@@ -7,5 +8,9 @@ export default Ember.View.extend({
       controller.send("sendMessage");
       e.preventDefault();
     }
+  },
+
+  didInsertElement: function() {
+    $(".messages").scrollTop($(".messages")[0].scrollHeight);
   }
 });
