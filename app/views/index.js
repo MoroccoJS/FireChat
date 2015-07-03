@@ -11,6 +11,8 @@ export default Ember.View.extend({
   },
 
   didInsertElement: function() {
-    $(".messages").scrollTop($(".messages")[0].scrollHeight);
+    setTimeout(function () {
+      $(".messages").scrollTop($(".messages")[0].scrollHeight);
+    }, 10);
   }
 });
