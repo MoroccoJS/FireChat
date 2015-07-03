@@ -3,7 +3,11 @@
 <div class="chatbox">
   <div class="messages">
     {{#each message in model}}
-      <div><span style="color: {{message.color}}">{{message.username}}:</span> {{message.body}}</div>
+      <div class="message">
+        <span class="username" style="color: {{message.color}}">{{message.username}}:</span>
+        {{message.body}}
+        <span class="date">{{format-date message}}</span>
+      </div>
     {{/each}}
   </div>
 
