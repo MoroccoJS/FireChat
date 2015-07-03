@@ -1,5 +1,4 @@
 import Ember from 'ember';
-/* global $ */
 
 export default Ember.View.extend({
   keyPress: function(e) {

@@ -1,6 +1,5 @@
 import Ember from 'ember';
 /* global Please */
-/* global $ */
 
 export default Ember.ArrayController.extend({
   sortProperties: ['timestamp'],

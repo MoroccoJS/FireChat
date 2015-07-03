@@ -6,13 +6,15 @@ body {
 }
 
 .chatbox {
-  width: 900px;
-  height: 500px;
-  margin: 80px auto 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 
   .messages {
-    width: 880px;
-    height: 400px;
+    width: calc(100% - 20px);
+    height: calc(100% - 100px);
     background-color: #fff;
     color: #2E3239;
     text-align: left;
@@ -43,7 +45,7 @@ body {
     textarea {
       margin: 0;
       padding: 10px;
-      width: 750px;
+      width: calc(100% - 150px);
       height: 60px;
       border: none;
       resize: none;
